@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Alert in Browser with Jquery",
+  "description": "Print an alert in browser when page load and jquert load.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Alert in Browser after jquery load"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["jquery.min.js", "script.js"]
+    }
+  ]
+}
